@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxes</title>
+</head>
+<style>
+    body{
+        background-color: #F1E6D4;
+
+    }
+
+    h3 {
+        text-align: center;
+    }
+    .contentFrame{
+        margin: auto;
+        display: flex;
+        /* Using flex-wrap to ensure box-divs remain with same size after user inputs any given amount in the route */
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .box {
+        width:50px; 
+        height:50px; 
+        border: 2px solid black;
+        /* provides space between boxes */
+        margin-left: 10px;
+        margin-bottom: 5px;
+        background-color: {{color}};
+    }
+</style>
+
+<body>
+    <h3>Welcome to the box world! 🤙🏽!</h3>
+    <div class="contentFrame">
+        <!-- running for-loop to print x amount of boxes  -->
+        {% for number in range(0, x)%}
+            <div class="box"></div>
+        {% endfor %}
+    </div>
+    </div>
+</body>
+</html>
